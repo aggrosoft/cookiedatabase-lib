@@ -1,7 +1,7 @@
 {
   "name": "aggrosoft/cookiedatabase-lib",
   "description": "Connect to cookiedatabase.org API",
-  "license": "Commercial",
+  "license": "MIT",
   "version": "1.0.0",
   "require": {
     "ext-curl": "*",

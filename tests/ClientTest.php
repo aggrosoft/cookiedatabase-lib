@@ -42,4 +42,11 @@ final class ClientTest extends TestCase
         $this->assertIsArray($infos);
         $this->assertNotEmpty($infos);
     }
+
+    public function testGetWebsiteCookies(): void
+    {
+        $client = $this->getClient();
+        $cookies = $client->getWebsiteCookies('https://www.cap-bedrucken.de');
+        var_dump($cookies);
+    }
 }

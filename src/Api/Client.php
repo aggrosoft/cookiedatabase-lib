@@ -40,6 +40,14 @@ class Client
         return $this->postData('cookies', json_encode([$this->language => $cookies]));
     }
 
+    public function getWebsiteCookies($url)
+    {
+        $browser = $this->getBrowser();
+        $result = $browser->get($url);
+        $cookies = $result->getHeader('Set-Cookie');
+        return $cookies;
+    }
+
     protected function getData ($method) {
         $browser = $this->getBrowser();
         $result = $browser->get($this->getMethodUrl($method));
